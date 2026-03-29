@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /.git/
+
+Sitemap: https://demo559.innexar.app/sitemap.xml

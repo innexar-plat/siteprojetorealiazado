@@ -1,0 +1,37 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .background { fill: #1a1a1a; }
+      }
+      @media (prefers-color-scheme: light) {
+        .background { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="300" class="background"/>
+  
+  <!-- Logo scaled to fit favicon -->
+  <g transform="translate(30, 30) scale(0.8)">
+    <!-- Blue left triangle -->
+    <polygon points="90,50 90,220 40,220 40,120" fill="#0052CC"/>
+    
+    <!-- Orange/Yellow elements -->
+    <polygon points="90,50 140,20 200,50 140,90" fill="#FF8C00"/>
+    <polygon points="140,90 200,50 250,80 200,120" fill="#FFD700"/>
+    
+    <!-- Brown triangle -->
+    <polygon points="140,90 200,120 160,150" fill="#8B4513"/>
+    
+    <!-- Large yellow shape -->
+    <polygon points="140,150 200,120 280,170 240,200" fill="#FFD700"/>
+    
+    <!-- Orange circle base -->
+    <circle cx="120" cy="240" r="50" fill="#FF8C00"/>
+    
+    <!-- Orange accent -->
+    <polygon points="100,220 140,200 120,250" fill="#D2691E"/>
+  </g>
+</svg>

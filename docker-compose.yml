@@ -1,0 +1,25 @@
+# siteprojetorealiazado – demo559.innexar.app (Traefik)
+# Uso: docker compose up -d --build
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    networks:
+      - fixelo_fixelo-network
+    labels:
+      - "innexar.scope=br"
+      - "innexar.app=siteprojetorealiazado"
+      - "traefik.enable=true"
+      - "traefik.http.routers.innexar-siteprojetorealiazado.rule=Host(`demo559.innexar.app`)"
+      - "traefik.http.routers.innexar-siteprojetorealiazado.entrypoints=websecure"
+      - "traefik.http.routers.innexar-siteprojetorealiazado.tls=true"
+      - "traefik.http.routers.innexar-siteprojetorealiazado.service=innexar-siteprojetorealiazado-service"
+      - "traefik.http.services.innexar-siteprojetorealiazado-service.loadbalancer.server.port=3000"
+      - "traefik.http.services.innexar-siteprojetorealiazado-service.loadbalancer.passHostHeader=true"
+
+networks:
+  fixelo_fixelo-network:
+    external: true

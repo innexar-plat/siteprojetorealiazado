@@ -154,9 +154,8 @@
 
 /* Mobile lang selector */
 .navbar__mobile-lang {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
 }
 
 /* Hamburger */

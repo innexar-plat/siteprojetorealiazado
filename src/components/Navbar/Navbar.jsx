@@ -95,10 +95,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`navbar__mobile ${menuOpen ? 'navbar__mobile--open' : ''}`}>
-        <div className="navbar__mobile-lang">
-          <LanguageSwitcher />
-        </div>
         <nav className="navbar__mobile-nav">
+          <div className="navbar__mobile-lang">
+            <LanguageSwitcher />
+          </div>
           {navLinks.map(({ href, label }, i) => (
             <a
               key={href}
